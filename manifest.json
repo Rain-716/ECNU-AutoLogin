@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "ECNU SSO AutoLogin",
+  "version": "1.0",
+  "description": "ECNU统一认证自动登录",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://sso.ecnu.edu.cn/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://sso.ecnu.edu.cn/login*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
